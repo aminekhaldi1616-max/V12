@@ -23,6 +23,11 @@ jobs:
         with:
           channel: stable
 
+      - name: Check project
+        run: |
+          ls -la
+          test -f pubspec.yaml
+
       - name: Get dependencies
         run: flutter pub get
 
